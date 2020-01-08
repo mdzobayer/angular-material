@@ -10,6 +10,9 @@ import { MyDialogComponent } from './my-dialog/my-dialog.component';
 export class AppComponent {
   title = 'angular-material';
 
+  animal: string;
+  name: string;
+
   constructor(public dialog: MatDialog) {}
 
   openDialog(): void {

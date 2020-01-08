@@ -8,11 +8,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { MyDialogComponent } from './my-dialog/my-dialog.component';
+import { DialogOverviewExample } from './dialog-overview-example/dialog-overview-example.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyDialogComponent
+    MyDialogComponent,
+    DialogOverviewExample
   ],
   imports: [
     BrowserModule,
