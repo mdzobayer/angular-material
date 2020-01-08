@@ -1,4 +1,6 @@
+import { MatDialog } from '@angular/material/dialog';
 import { Component } from '@angular/core';
+import { MyDialogComponent } from './my-dialog/my-dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-material';
+
+  constructor(public dialog: MatDialog) {}
+
+  openDialog(): void {
+    let dialogRef = this.dialog.open(MyDialogComponent, {
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
 }
