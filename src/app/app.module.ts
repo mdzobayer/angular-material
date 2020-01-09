@@ -23,10 +23,6 @@ import { FormsModule, FormControl, ReactiveFormsModule } from '@angular/forms';
     MatAutocompleteModule,
     MatFormFieldModule,
     MatInputModule,
-    FormsModule,
-    MatInputModule,
-    FormControl,
-    ReactiveFormsModule
   ],
   entryComponents: [
 
