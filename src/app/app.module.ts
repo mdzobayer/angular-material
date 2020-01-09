@@ -7,8 +7,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MyDialogComponent } from './my-dialog/my-dialog.component';
-import { DialogOverviewExample, DialogOverviewExampleDialog } from './dialog-overview-example/dialog-overview-example.component';
-//import { DialogOverviewExampleDialog } from './dialog-overview-example'
+import { DialogOverviewExample } from './dialog-overview-example/dialog-overview-example.component';
 
 // Form Module
 import { FormsModule } from '@angular/forms';
@@ -18,6 +17,7 @@ import {MatInputModule} from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { DialogOverviewExampleDialogComponent } from './dialog-overview-example-dialog/dialog-overview-example-dialog.component';
 
 
 @NgModule({
@@ -25,7 +25,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     AppComponent,
     MyDialogComponent,
     DialogOverviewExample,
-    DialogOverviewExampleDialog
+    DialogOverviewExampleDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -39,8 +39,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     FormsModule
   ],
   entryComponents: [
-    DialogOverviewExampleDialog,
-    MyDialogComponent
+    MyDialogComponent,
+    DialogOverviewExampleDialogComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
