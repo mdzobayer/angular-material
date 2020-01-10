@@ -1,9 +1,16 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
-export interface DialogData {
-  animal: string;
+export class DialogData {
+  email: string;
   name: string;
+  sex: string;
+
+  constructor() {
+    this.email = "";
+    this.name = "";
+    this.sex = "";
+  }
 }
 
 @Component({
@@ -12,6 +19,8 @@ export interface DialogData {
   styleUrls: ['./dialog-overview-example-dialog.component.css']
 })
 export class DialogOverviewExampleDialogComponent implements OnInit {
+
+  genders: string[] = ['Male', 'Female', 'Other'];
 
   constructor(
     public dialogRef: MatDialogRef<DialogOverviewExampleDialogComponent>,

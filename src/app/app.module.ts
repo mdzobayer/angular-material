@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MyDialogComponent } from './my-dialog/my-dialog.component';
 import { DialogOverviewExample } from './dialog-overview-example/dialog-overview-example.component';
 
 // Form Module
@@ -18,12 +17,11 @@ import { MatButtonModule } from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { DialogOverviewExampleDialogComponent } from './dialog-overview-example-dialog/dialog-overview-example-dialog.component';
-
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyDialogComponent,
     DialogOverviewExample,
     DialogOverviewExampleDialogComponent
   ],
@@ -36,10 +34,10 @@ import { DialogOverviewExampleDialogComponent } from './dialog-overview-example-
     MatDialogModule,
     MatInputModule,
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
+    MatRadioModule
   ],
   entryComponents: [
-    MyDialogComponent,
     DialogOverviewExampleDialogComponent
   ],
   providers: [],

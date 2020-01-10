@@ -1,6 +1,7 @@
-import {Component, Inject} from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { DialogOverviewExampleDialogComponent } from '../dialog-overview-example-dialog/dialog-overview-example-dialog.component';
+import { DialogData } from '../dialog-overview-example-dialog/dialog-overview-example-dialog.component'
 
 /**
  * @title Dialog Overview
@@ -12,20 +13,24 @@ import { DialogOverviewExampleDialogComponent } from '../dialog-overview-example
 })
 export class DialogOverviewExample {
 
-  animal: string;
+  email: string;
   name: string;
+  sex: string;
 
-  constructor(public dialog: MatDialog) {}
+  dialogData: DialogData = new DialogData();
+
+  constructor(public dialog: MatDialog) { }
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogOverviewExampleDialogComponent, {
-      width: '250px',
-      data: {name: this.name, animal: this.animal}
+      width: '350px',
+      data: this.dialogData
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      this.animal = result;
+      //console.log('The dialog was closed : ', result);
+      this.dialogData = result;
+      console.log('dialogData : ', this.dialogData);
     });
   }
 
